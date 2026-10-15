@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Untuk Kak Yosi</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕯️</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Caveat:wght@500;700&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#091540;--cobalt:#3a6df0;--peri:#9db8ff;--lilac:#c9b3ff;--peach:#ffd3c2;--cream:#fff6ee;
+--disp:"Instrument Serif",Georgia,serif;--hand:"Caveat","Segoe Script","Bradley Hand",cursive;--sans:"Jost","Segoe UI",system-ui,sans-serif}
+*{box-sizing:border-box;margin:0}
+html,body{height:100%;overflow:hidden}
+body{font-family:var(--sans);font-weight:300;color:var(--cream);background:var(--ink);padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
+.aura{position:fixed;inset:0;overflow:hidden;background:linear-gradient(160deg,#16307f,#0c1a55 55%,#1b2c78)}
+.aura i{position:absolute;border-radius:50%;filter:blur(90px);opacity:.55;animation:drift 24s ease-in-out infinite alternate}
+.aura i:nth-child(1){width:70vmax;height:70vmax;left:-25vmax;top:-25vmax;background:var(--cobalt)}
+.aura i:nth-child(2){width:60vmax;height:60vmax;right:-22vmax;bottom:-22vmax;background:var(--lilac);animation-delay:-8s;opacity:.4}
+.aura i:nth-child(3){width:40vmax;height:40vmax;left:-8vmax;bottom:-14vmax;background:var(--peach);animation-delay:-14s;opacity:.28}
+@keyframes drift{to{transform:translate(8vmax,6vmax) scale(1.15)}}
+#veil{position:fixed;inset:0;background:linear-gradient(180deg,#030a28,#0a1650);opacity:0;transition:opacity 2s;pointer-events:none}
+body.night #veil{opacity:.55}
+body:after{content:"";position:fixed;inset:0;pointer-events:none;opacity:.1;z-index:60;mix-blend-mode:overlay;
+background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+#fx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:50}
+.sp{position:fixed;z-index:1;color:var(--peach);animation:tw 3s ease-in-out infinite alternate;pointer-events:none}
+@keyframes tw{from{opacity:.1;transform:scale(.6)}to{opacity:.9;transform:scale(1.1) rotate(20deg)}}
+.glass{background:rgba(255,255,255,.1);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.28);box-shadow:0 24px 60px rgba(5,10,50,.35),inset 0 1px 0 rgba(255,255,255,.4)}
+.slide{position:absolute;z-index:5;inset:0 0 64px;display:flex;flex-direction:column;align-items:center;justify-content:safe center;text-align:center;padding:24px 20px;gap:18px;overflow-y:auto;opacity:0;visibility:hidden;transition:opacity 1s,visibility 1s}
+.slide.on{opacity:1;visibility:visible}
+h1,h2{font-family:var(--disp);font-weight:400;font-style:italic}
+h1{font-size:clamp(2.2rem,8vw,3.4rem);line-height:1.05}
+.hint{font-size:.85rem;letter-spacing:.06em;opacity:.75}
+.link{background:none;border:0;color:var(--peach);font:inherit;font-size:.9rem;cursor:pointer;text-decoration:underline;text-underline-offset:4px}
+:focus-visible{outline:2px solid var(--peach);outline-offset:4px}
+nav{position:fixed;bottom:0;left:0;right:0;height:64px;display:flex;align-items:center;justify-content:center;gap:18px;z-index:20;padding-bottom:env(safe-area-inset-bottom)}
+nav button{width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.08);backdrop-filter:blur(8px);color:var(--cream);font-size:1rem;cursor:pointer}
+nav button:disabled{opacity:.2}
+#next.pulse{animation:glow 2s infinite}
+@keyframes glow{50%{box-shadow:0 0 0 9px rgba(255,211,194,.2);border-color:var(--peach)}}
+.dots{display:flex;gap:10px}.dots i{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.3);transition:.4s}.dots i.on{background:var(--peach);transform:scale(1.4)}
+/* 1 */
+.disc{width:min(330px,78vw);aspect-ratio:1;border-radius:50%;display:grid;place-items:center}
+#cake{width:72%;cursor:pointer;overflow:visible}
+#cake *{fill:none;stroke:var(--cream);stroke-width:1.5;stroke-linecap:round}
+#cake .fl{fill:var(--peach);stroke:none;transform-box:fill-box;transform-origin:center bottom;animation:flick .35s infinite alternate;transition:opacity .5s}
+#cake .halo{fill:url(#g);stroke:none;transition:opacity 1.2s;animation:br 3s infinite}
+@keyframes flick{from{transform:scale(1) rotate(-3deg)}to{transform:scale(.9,1.12) rotate(3deg)}}
+@keyframes br{50%{opacity:.65}}
+#cake.out .fl,#cake.out .halo{opacity:0;animation:none}
+#cake .sm{opacity:0;stroke:rgba(255,255,255,.6)}#cake.out .sm{animation:smoke 2.4s forwards}
+@keyframes smoke{0%{opacity:.8}to{opacity:0;transform:translateY(-34px)}}
+/* 2 */
+#s2{flex-direction:row;flex-wrap:wrap;gap:30px}
+.pol{background:var(--cream);padding:10px 10px 44px;border-radius:4px;transform:rotate(-4deg);box-shadow:0 22px 50px rgba(5,10,50,.5);width:min(250px,66vw);position:relative;cursor:pointer}
+.pol:before{content:"";position:absolute;top:-13px;left:50%;width:84px;height:24px;margin-left:-42px;background:rgba(201,179,255,.7);transform:rotate(3deg);backdrop-filter:blur(2px)}
+.pol img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block;filter:saturate(.75) contrast(1.05) hue-rotate(-8deg);transition:filter 1s}
+.pol.warm img{filter:none}
+.pol span{position:absolute;bottom:8px;left:0;right:0;font-family:var(--hand);font-size:1.5rem;color:#2b3a7a}
+.col{display:flex;flex-direction:column;gap:14px;align-items:center}
+.note{max-width:450px;text-align:left;border-radius:26px;padding:26px 26px 18px}
+.note h2{font-family:var(--hand);font-style:normal;font-weight:700;font-size:2.3rem;line-height:1.1;margin-bottom:10px;background:linear-gradient(90deg,#fff,var(--peach),var(--lilac));-webkit-background-clip:text;background-clip:text;color:transparent}
+.note p{font-family:var(--disp);font-size:1.3rem;line-height:1.5;margin-bottom:10px}
+.slide.on .note>*{animation:in 1.2s both}
+.slide.on .note>:nth-child(2){animation-delay:.8s}.slide.on .note>:nth-child(3){animation-delay:1.8s}.slide.on .note>:nth-child(4){animation-delay:2.8s}.slide.on .note>:nth-child(5){animation-delay:3.6s}
+@keyframes in{from{opacity:0;transform:translateY(8px)}}
+body.editing [data-edit]{outline:1px dashed var(--peach);outline-offset:4px;cursor:text;-webkit-text-fill-color:var(--cream)}
+.player{display:flex;align-items:center;gap:12px;border-radius:20px;padding:10px 14px 10px 10px;width:min(340px,90vw);text-align:left}
+.player img{width:48px;height:48px;border-radius:12px;object-fit:cover}
+.player div{flex:1;min-width:0}.player b{display:block;font-weight:400;font-size:.95rem}.player small{opacity:.7;font-size:.75rem}
+.pb{height:3px;border-radius:9px;background:rgba(255,255,255,.25);margin-top:7px;overflow:hidden}.pb i{display:block;height:100%;width:0;background:var(--peach)}
+.player button{width:38px;height:38px;border-radius:50%;border:0;background:var(--cream);color:var(--ink);cursor:pointer;font-size:.85rem}
+/* 3 */
+#stage{position:relative;width:min(560px,92vw);height:min(330px,44vh);border-radius:26px;cursor:crosshair;overflow:hidden}
+#stage svg{position:absolute;inset:0;width:100%;height:100%}
+#stage .ln{stroke:var(--peach);stroke-width:1;opacity:.8;stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+#stage .st{fill:#fff;filter:drop-shadow(0 0 7px var(--peach))}
+#stage .rg{fill:none;stroke:var(--peach);transform-box:fill-box;transform-origin:center;animation:ring 1.4s forwards}
+@keyframes ring{from{transform:scale(1);opacity:.9}to{transform:scale(5);opacity:0}}
+#empty{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--hand);font-size:1.6rem;opacity:.8;pointer-events:none;transition:opacity .6s}
+#say{min-height:1.6em;font-family:var(--hand);font-size:1.7rem}
+#final{opacity:0;transition:opacity 1.6s;pointer-events:none}#final.on{opacity:1}
+#final h1{font-family:var(--hand);font-style:normal;font-weight:700;color:var(--peach)}
+/* 4 */
+.frame{position:relative;width:min(330px,76vw);aspect-ratio:705/546;margin-bottom:30px}
+.frame img{width:100%;height:100%;object-fit:cover;display:block;border-radius:8px;border:6px solid var(--cream);box-shadow:0 20px 50px rgba(0,0,20,.5);filter:saturate(.8) brightness(.9)}
+.hat{position:absolute;left:49%;top:-12%;width:14%;transform:translateX(-50%) rotate(6deg)}
+.cakeF{position:absolute;left:50%;bottom:-20%;width:30%;transform:translateX(-50%)}
+.hat *,.cakeF *{fill:none;stroke:var(--peach);stroke-width:1.6;stroke-linecap:round}
+.hat .f{fill:rgba(58,109,240,.9)}.cakeF .f{fill:rgba(9,21,64,.85)}.cakeF .fl{fill:var(--peach);stroke:none;transform-box:fill-box;transform-origin:center bottom;animation:flick .35s infinite alternate}
+.cap{font-family:var(--hand);font-size:clamp(1.5rem,5vw,1.9rem);line-height:1.2;max-width:440px}
+.big{font-family:var(--disp);font-style:italic;font-size:clamp(2.6rem,12vw,5rem);line-height:1;margin-top:6px}
+.w{display:inline-block;opacity:0;filter:blur(12px);transform:translateY(16px);background:linear-gradient(90deg,#fff,var(--peach) 60%,var(--lilac));-webkit-background-clip:text;background-clip:text;color:transparent;padding:0 .08em}
+.slide.on .w{animation:wi 1.4s forwards;animation-delay:calc(2s + var(--i)*.45s)}
+@keyframes wi{to{opacity:1;filter:blur(0);transform:none}}
+#music{position:fixed;left:14px;bottom:12px;z-index:21}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01s!important;animation-iteration-count:1!important}}
+</style>
+</head>
+<body>
+<div class="aura"><i></i><i></i><i></i></div><div id="veil"></div>
+<canvas id="fx"></canvas>
+<audio id="aud" src="musik.mp3" loop preload="auto"></audio>
+
+<section class="slide on" id="s1">
+  <h1 id="t1">Untuk Kak Yosi Sibarani</h1>
+  <div class="disc glass">
+  <svg id="cake" viewBox="0 0 200 230" role="button" tabindex="0" aria-label="Tiup lilin">
+    <defs><radialGradient id="g"><stop offset="0" stop-color="#ffd3c2" stop-opacity=".6"/><stop offset="1" stop-color="#ffd3c2" stop-opacity="0"/></radialGradient></defs>
+    <circle class="halo" cx="100" cy="52" r="56"/>
+    <ellipse cx="100" cy="212" rx="92" ry="11"/>
+    <rect x="22" y="152" width="156" height="56" rx="8"/><path d="M22 168q13 14 26 0t26 0t26 0t26 0t26 0t26 0"/>
+    <rect x="52" y="106" width="96" height="46" rx="8"/><path d="M52 120q12 12 24 0t24 0t24 0t24 0"/>
+    <rect x="96" y="70" width="8" height="36" rx="2"/><path d="M100 70v-6"/>
+    <path class="fl" d="M100 66c-7-9 0-16 0-22 7 6 9 14 0 22z"/>
+    <g class="sm"><path d="M100 60q6-8 0-16"/><path d="M104 56q6-8 0-14"/></g>
+  </svg></div>
+  <p class="hint" id="h1">ketuk kuenya untuk meniup lilin</p>
+</section>
+
+<section class="slide" id="s2">
+  <div class="pol" id="pol" title="Ketuk fotonya"><img src="foto1.jpg" alt="Foto berdua"><span>kita berdua ✦</span></div>
+  <div class="col">
+    <div class="note glass">
+      <h2 data-edit>Haiiiiiiiii ante kuuu hehehe</h2>
+      <p data-edit>Hmm, bingung mau ngetik apa… jadiii, selamat wisuda! Eh iya tahe, oo iya, selamat ulang tahun jugaaaa! Iya iya, nanti kita rayakan tgl 18 Januari lagi tahun depan, kuingat pun ante.</p>
+      <p data-edit>Semoga kakak sehat selalu, panjang umur, murah rezeki, semangat magang barunyaaa! Kita beli es juga nanti kalau kakak udah jadi bioshop.</p>
+      <p data-edit>Jangan marah-marah, apalagi sampai melupakan aku. Aku bakal terus chat kakak biar kakak jangan lupa samaku.</p>
+      <button class="link" id="editBtn">ubah teks</button>
+    </div>
+    <div class="player glass"><img src="foto1.jpg" alt=""><div><b>Untuk Kak Yosi</b><small>dari adik yang kau sayangi</small><div class="pb"><i id="pf"></i></div></div><button id="pp" aria-label="Putar musik">▶</button></div>
+  </div>
+</section>
+
+<section class="slide" id="s3">
+  <h2 style="font-size:1.8rem">Dari adik yang kau sayangi ini</h2>
+  <div id="stage" class="glass"><div id="empty">ketuk untuk menyalakan bintang ✦</div><svg id="sky"></svg></div>
+  <p id="say"></p>
+  <div id="final"><h1>Jangan lupa samaku.</h1></div>
+</section>
+
+<section class="slide" id="s4">
+  <div class="frame">
+    <img src="foto2.jpg" alt="Foto kecil dengan topi ulang tahun">
+    <svg class="hat" viewBox="0 0 60 84"><path class="f" d="M30 8 56 80H4Z"/><path d="M17 46 43 46M11 64 49 64"/><circle cx="30" cy="6" r="4" fill="#ffd3c2"/></svg>
+    <svg class="cakeF" viewBox="0 0 100 80"><ellipse cx="50" cy="72" rx="46" ry="6"/><rect class="f" x="12" y="46" width="76" height="24" rx="4"/><rect class="f" x="26" y="26" width="48" height="20" rx="4"/><path d="M50 26v-8"/><path class="fl" d="M50 17c-4-5 0-9 0-12 4 3 5 7 0 12z"/></svg>
+  </div>
+  <p class="cap" data-edit>Jangan lupa janji kakak, kita ke pasar malam. Masih kuingat itu.</p>
+  <div class="big" id="big" data-split>Selamat Ulang Tahun Kakak</div>
+  <button class="link" id="again">ulangi dari awal</button>
+</section>
+
+<button id="music" aria-label="Musik">♪</button>
+<nav><button id="prev" aria-label="Sebelumnya">‹</button><div class="dots" id="dots"></div><button id="next" aria-label="Berikutnya">›</button></nav>
+
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],R=(a,b)=>Math.random()*(b-a)+a;
+/* kilau ✦ */
+for(let i=0;i<16;i++){const s=document.createElement('span');s.className='sp';s.textContent='✦';s.style.cssText=`left:${R(2,96)}vw;top:${R(2,92)}vh;font-size:${R(8,18)}px;animation-delay:${R(0,3)}s;animation-duration:${R(2,5)}s`;document.body.append(s)}
+/* partikel */
+const fx=$('#fx'),f=fx.getContext('2d');let P=[];const COL=['#ffd3c2','#fff6ee','#c9b3ff','#9db8ff'];
+function size(){fx.width=innerWidth;fx.height=innerHeight}
+function firework(x,y,n=34){for(let i=0;i<n;i++){const a=R(0,6.28),v=R(1,3.3);P.push({x,y,vx:Math.cos(a)*v,vy:Math.sin(a)*v,g:.028,life:R(80,125),c:COL[i%4],r:R(1,1.9)})}}
+function dust(x,y,n=60){for(let i=0;i<n;i++)P.push({x:x+R(-60,60),y:y+R(-20,40),vx:R(-.3,.3),vy:R(-1.3,-.4),g:-.003,life:R(140,240),c:COL[i%2],r:R(.8,2.2)})}
+function loop(){f.clearRect(0,0,fx.width,fx.height);P=P.filter(p=>p.life>0);
+ for(const p of P){p.x+=p.vx;p.y+=p.vy;p.vy+=p.g;p.vx*=.99;p.life--;f.globalAlpha=Math.min(1,p.life/50);f.fillStyle=p.c;f.shadowColor=p.c;f.shadowBlur=6;f.beginPath();f.arc(p.x,p.y,p.r,0,7);f.fill()}
+ requestAnimationFrame(loop)}
+addEventListener('resize',size);size();loop();
+/* kata bergerak */
+$$('[data-split]').forEach(el=>{el.innerHTML=el.textContent.split(' ').map((w,i)=>`<span class="w" style="--i:${i}">${w}</span>`).join(' ')});
+/* navigasi */
+const slides=$$('.slide');let cur=0,blown=false,fw;
+slides.forEach(()=>$('#dots').append(document.createElement('i')));
+function go(n){cur=Math.max(0,Math.min(3,n));slides.forEach((s,i)=>s.classList.toggle('on',i===cur));
+ [...$('#dots').children].forEach((d,i)=>d.classList.toggle('on',i===cur));
+ $('#prev').disabled=!cur;$('#next').disabled=cur===3;$('#next').classList.toggle('pulse',cur===0&&blown);
+ document.body.classList.toggle('night',cur===3);
+ clearInterval(fw);if(cur===3){const one=()=>firework(R(.15,.85)*innerWidth,R(.1,.4)*innerHeight);setTimeout(one,900);fw=setInterval(one,4500)}}
+$('#prev').onclick=()=>go(cur-1);$('#next').onclick=()=>go(cur+1);
+addEventListener('keydown',e=>{if(document.body.classList.contains('editing'))return;if(e.key==='ArrowRight')go(cur+1);if(e.key==='ArrowLeft')go(cur-1)});
+let tx=0;addEventListener('touchstart',e=>tx=e.touches[0].clientX,{passive:true});
+addEventListener('touchend',e=>{const d=e.changedTouches[0].clientX-tx;if(Math.abs(d)>90&&!document.body.classList.contains('editing')&&!e.target.closest('#stage'))go(cur+(d<0?1:-1))},{passive:true});
+/* musik + player */
+const aud=$('#aud');let on=false;
+function ui(){$('#music').textContent=on?'♫':'♪';$('#pp').textContent=on?'❚❚':'▶'}
+function play(){if(on)return;on=true;ui();aud.play().catch(()=>{on=false;ui()})}
+function toggle(){if(on){on=false;aud.pause();ui()}else play()}
+$('#music').onclick=toggle;$('#pp').onclick=toggle;
+aud.addEventListener('timeupdate',()=>{$('#pf').style.width=(aud.currentTime/(aud.duration||1)*100)+'%'});
+/* 1 */
+function blow(){play();if(blown)return;blown=true;$('#cake').classList.add('out');
+ const r=$('#cake').getBoundingClientRect();dust(r.left+r.width/2,r.top+60);
+ $('#t1').textContent='Selamat ulang tahun, Kak Yosi.';$('#h1').textContent='lanjut ke slide berikutnya ›';$('#next').classList.add('pulse')}
+$('#cake').onclick=blow;$('#cake').onkeydown=e=>{if(e.key==='Enter'||e.key===' ')blow()};
+/* 2 */
+$('#pol').onclick=()=>$('#pol').classList.toggle('warm');
+const ed=$$('[data-edit]');ed.forEach((el,i)=>{const v=localStorage.getItem('yosi4-'+i);if(v)el.innerHTML=v});
+$('#editBtn').onclick=()=>{const e=document.body.classList.toggle('editing');ed.forEach(el=>el.contentEditable=e);
+ $('#editBtn').textContent=e?'simpan':'ubah teks';if(!e)ed.forEach((el,i)=>localStorage.setItem('yosi4-'+i,el.innerHTML))};
+/* 3 */
+const SAY=['Chat aku ya, Kak.','Ingat tgl 18 Januari.','Es bareng nanti.','Semangat magangnya.','Pasar malam, jangan lupa.','Jangan marah-marah.','Jangan lupa samaku.'];
+const NS='http://www.w3.org/2000/svg';let pts=[];
+function mk(t,a){const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);$('#sky').append(e)}
+$('#stage').addEventListener('click',e=>{if(pts.length>=SAY.length)return;
+ const b=$('#stage').getBoundingClientRect(),x=e.clientX-b.left,y=e.clientY-b.top,p=pts[pts.length-1];$('#empty').style.opacity=0;
+ if(p)mk('line',{class:'ln',x1:p[0],y1:p[1],x2:x,y2:y,pathLength:1});
+ mk('circle',{class:'rg',cx:x,cy:y,r:4});mk('circle',{class:'st',cx:x,cy:y,r:3});pts.push([x,y]);$('#say').textContent=SAY[pts.length-1];
+ if(pts.length===SAY.length){const q=pts[0];mk('line',{class:'ln',x1:x,y1:y,x2:q[0],y2:q[1],pathLength:1});
+  setTimeout(()=>{$('#final').classList.add('on');firework(innerWidth/2,innerHeight*.3,30)},1000)}});
+/* 4 */
+$('#s4').addEventListener('click',e=>{if(!e.target.closest('button'))firework(e.clientX,e.clientY,30)});
+$('#again').onclick=()=>{blown=false;pts=[];$('#sky').innerHTML='';$('#say').textContent='';$('#final').classList.remove('on');$('#empty').style.opacity=.8;
+ $('#cake').classList.remove('out');$('#t1').textContent='Untuk Kak Yosi Sibarani';$('#h1').textContent='ketuk kuenya untuk meniup lilin';go(0)};
+go(0);
+</script>
+</body>
+</html>
